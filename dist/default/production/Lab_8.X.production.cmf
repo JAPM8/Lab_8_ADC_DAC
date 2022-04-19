@@ -14,13 +14,13 @@
 $dist/default/production\Lab_8.X.production.o
 cinit CODE 0 F F 4 2 1
 idloc IDLOC 5 2000 2000 4 2 1
-text1 CODE 0 13 13 36 2 1
-text2 CODE 0 49 49 19 2 1
-maintext CODE 0 62 62 10 2 1
-cstackCOMMON COMMON 1 70 70 4 1 1
+text1 CODE 0 13 13 3C 2 1
+text2 CODE 0 7E 7E 25 2 1
+maintext CODE 0 4F 4F 2F 2 1
+cstackCOMMON COMMON 1 70 70 5 1 1
 intentry CODE 0 4 4 8 2 1
 config CONFIG 4 2007 2007 2 2 1
-$C:\Users\javyp\AppData\Local\Temp\xcAsgno.o
+$C:\Users\javyp\AppData\Local\Temp\xcAsia8.o
 idloc IDLOC 5 2000 2000 4 2 1
 reset_vec CODE 0 0 0 3 2 1
 end_init CODE 0 C C 3 2 1
@@ -40,21 +40,21 @@ BANK1 A0-EF 1
 BANK2 110-16F 1
 BANK3 190-1EF 1
 CONST 3-3 2
-CONST 72-1FFF 2
+CONST A3-1FFF 2
 ENTRY 3-3 2
-ENTRY 72-1FFF 2
+ENTRY A3-1FFF 2
 CODE 3-3 2
-CODE 72-1FFF 2
+CODE A3-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-10F 1
 SFR3 180-18F 1
-COMMON 74-7D 1
+COMMON 75-7D 1
 EEDATA 2100-21FF 2
 STRCODE 3-3 2
-STRCODE 72-1FFF 2
+STRCODE A3-1FFF 2
 STRING 3-3 2
-STRING 72-1FFF 2
+STRING A3-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -69,44 +69,57 @@ STRING 72-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Lab_8.X.production.o
-F cinit CODE >454:C:\Users\javyp\AppData\Local\Temp\xcAsgno.s
-F cinit CODE >457:C:\Users\javyp\AppData\Local\Temp\xcAsgno.s
-F cinit CODE >463:C:\Users\javyp\AppData\Local\Temp\xcAsgno.s
-F cinit CODE >465:C:\Users\javyp\AppData\Local\Temp\xcAsgno.s
-10 cinit CODE >466:C:\Users\javyp\AppData\Local\Temp\xcAsgno.s
-4 intentry CODE >47:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_preLab.c
-49 text2 CODE >47:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_preLab.c
-49 text2 CODE >49:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_preLab.c
-4F text2 CODE >50:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_preLab.c
-54 text2 CODE >50:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_preLab.c
-58 text2 CODE >51:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_preLab.c
-5A text2 CODE >53:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_preLab.c
-5B text2 CODE >56:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_preLab.c
-13 text1 CODE >70:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_preLab.c
-13 text1 CODE >71:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_preLab.c
-17 text1 CODE >72:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_preLab.c
-18 text1 CODE >74:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_preLab.c
-1E text1 CODE >75:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_preLab.c
-1F text1 CODE >77:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_preLab.c
-21 text1 CODE >78:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_preLab.c
-24 text1 CODE >80:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_preLab.c
-27 text1 CODE >81:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_preLab.c
-2A text1 CODE >84:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_preLab.c
-2E text1 CODE >85:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_preLab.c
-31 text1 CODE >86:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_preLab.c
-32 text1 CODE >87:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_preLab.c
-36 text1 CODE >88:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_preLab.c
-39 text1 CODE >89:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_preLab.c
-3C text1 CODE >90:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_preLab.c
-40 text1 CODE >93:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_preLab.c
-41 text1 CODE >94:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_preLab.c
-44 text1 CODE >95:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_preLab.c
-47 text1 CODE >96:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_preLab.c
-48 text1 CODE >97:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_preLab.c
-62 maintext CODE >58:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_preLab.c
-62 maintext CODE >60:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_preLab.c
-67 maintext CODE >64:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_preLab.c
-6D maintext CODE >65:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_preLab.c
+F cinit CODE >458:C:\Users\javyp\AppData\Local\Temp\xcAsia8.s
+F cinit CODE >461:C:\Users\javyp\AppData\Local\Temp\xcAsia8.s
+F cinit CODE >467:C:\Users\javyp\AppData\Local\Temp\xcAsia8.s
+F cinit CODE >469:C:\Users\javyp\AppData\Local\Temp\xcAsia8.s
+10 cinit CODE >470:C:\Users\javyp\AppData\Local\Temp\xcAsia8.s
+4 intentry CODE >47:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_Lab.c
+7E text2 CODE >47:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_Lab.c
+7E text2 CODE >49:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_Lab.c
+84 text2 CODE >50:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_Lab.c
+89 text2 CODE >50:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_Lab.c
+8D text2 CODE >51:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_Lab.c
+8F text2 CODE >52:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_Lab.c
+90 text2 CODE >53:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_Lab.c
+95 text2 CODE >53:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_Lab.c
+99 text2 CODE >54:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_Lab.c
+9B text2 CODE >56:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_Lab.c
+9C text2 CODE >59:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_Lab.c
+13 text1 CODE >80:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_Lab.c
+13 text1 CODE >81:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_Lab.c
+17 text1 CODE >82:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_Lab.c
+18 text1 CODE >84:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_Lab.c
+1E text1 CODE >85:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_Lab.c
+1F text1 CODE >87:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_Lab.c
+21 text1 CODE >88:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_Lab.c
+24 text1 CODE >90:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_Lab.c
+27 text1 CODE >91:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_Lab.c
+2A text1 CODE >92:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_Lab.c
+2D text1 CODE >93:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_Lab.c
+30 text1 CODE >96:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_Lab.c
+34 text1 CODE >97:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_Lab.c
+37 text1 CODE >98:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_Lab.c
+38 text1 CODE >99:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_Lab.c
+3C text1 CODE >100:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_Lab.c
+3F text1 CODE >101:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_Lab.c
+42 text1 CODE >102:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_Lab.c
+46 text1 CODE >105:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_Lab.c
+47 text1 CODE >106:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_Lab.c
+4A text1 CODE >107:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_Lab.c
+4D text1 CODE >108:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_Lab.c
+4E text1 CODE >109:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_Lab.c
+4F maintext CODE >61:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_Lab.c
+4F maintext CODE >63:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_Lab.c
+54 maintext CODE >67:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_Lab.c
+5A maintext CODE >69:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_Lab.c
+5F maintext CODE >69:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_Lab.c
+63 maintext CODE >70:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_Lab.c
+68 maintext CODE >71:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_Lab.c
+6D maintext CODE >71:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_Lab.c
+71 maintext CODE >72:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_Lab.c
+73 maintext CODE >74:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_Lab.c
+77 maintext CODE >75:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_8_ADC_DAC\Lab_8.X\main_Lab.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -120,24 +133,24 @@ F cinit CODE >465:C:\Users\javyp\AppData\Local\Temp\xcAsgno.s
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
 ___latbits 2 0 ABS 0 - dist/default/production\Lab_8.X.production.o
-__Hspace_0 72 0 ABS 0 - -
-__Hspace_1 74 0 ABS 0 - -
+__Hspace_0 A3 0 ABS 0 - -
+__Hspace_1 75 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Hspace_4 4010 0 ABS 0 - -
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __Hstrings 0 0 ABS 0 strings -
-___sp 0 0 STACK 2 stack C:\Users\javyp\AppData\Local\Temp\xcAsgno.o
-_main C4 0 CODE 0 maintext dist/default/production\Lab_8.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\javyp\AppData\Local\Temp\xcAsia8.o
+_main 9E 0 CODE 0 maintext dist/default/production\Lab_8.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Lab_8.X.production.o
-start 18 0 CODE 0 init C:\Users\javyp\AppData\Local\Temp\xcAsgno.o
+start 18 0 CODE 0 init C:\Users\javyp\AppData\Local\Temp\xcAsia8.o
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\javyp\AppData\Local\Temp\xcAsgno.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\javyp\AppData\Local\Temp\xcAsgno.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\javyp\AppData\Local\Temp\xcAsgno.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\javyp\AppData\Local\Temp\xcAsgno.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\javyp\AppData\Local\Temp\xcAsgno.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\javyp\AppData\Local\Temp\xcAsgno.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\javyp\AppData\Local\Temp\xcAsia8.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\javyp\AppData\Local\Temp\xcAsia8.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\javyp\AppData\Local\Temp\xcAsia8.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\javyp\AppData\Local\Temp\xcAsia8.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\javyp\AppData\Local\Temp\xcAsia8.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\javyp\AppData\Local\Temp\xcAsia8.o
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\Lab_8.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\Lab_8.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
@@ -145,10 +158,10 @@ __Hclrtext 0 0 ABS 0 clrtext -
 _ADRESH 1E 0 ABS 0 - dist/default/production\Lab_8.X.production.o
 _ANSELH 189 0 ABS 0 - dist/default/production\Lab_8.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-___stackhi 0 0 ABS 0 - C:\Users\javyp\AppData\Local\Temp\xcAsgno.o
-___stacklo 0 0 ABS 0 - C:\Users\javyp\AppData\Local\Temp\xcAsgno.o
+___stackhi 0 0 ABS 0 - C:\Users\javyp\AppData\Local\Temp\xcAsia8.o
+___stacklo 0 0 ABS 0 - C:\Users\javyp\AppData\Local\Temp\xcAsia8.o
 start_initialization 1E 0 CODE 0 cinit dist/default/production\Lab_8.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\javyp\AppData\Local\Temp\xcAsgno.o
+___int_sp 0 0 STACK 2 stack C:\Users\javyp\AppData\Local\Temp\xcAsia8.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -184,16 +197,16 @@ __Lsfr2 0 0 ABS 0 sfr2 -
 __Lsfr3 0 0 ABS 0 sfr3 -
 __Ltext 0 0 ABS 0 text -
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-__S0 72 0 ABS 0 - -
-__S1 74 0 ABS 0 - -
+__S0 A3 0 ABS 0 - -
+__S1 75 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
-_isr 92 0 CODE 0 text2 dist/default/production\Lab_8.X.production.o
+_isr FC 0 CODE 0 text2 dist/default/production\Lab_8.X.production.o
 saved_w 7E 0 ABS 0 - dist/default/production\Lab_8.X.production.o
-__end_of_isr C4 0 CODE 0 text2 dist/default/production\Lab_8.X.production.o
+__end_of_isr 146 0 CODE 0 text2 dist/default/production\Lab_8.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\javyp\AppData\Local\Temp\xcAsgno.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\javyp\AppData\Local\Temp\xcAsia8.o
 _PIE1bits 8C 0 ABS 0 - dist/default/production\Lab_8.X.production.o
-__pmaintext C4 0 CODE 0 maintext dist/default/production\Lab_8.X.production.o
+__pmaintext 9E 0 CODE 0 maintext dist/default/production\Lab_8.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
 _ADCON0bits 1F 0 ABS 0 - dist/default/production\Lab_8.X.production.o
@@ -211,7 +224,7 @@ __Hintentry 18 0 CODE 0 intentry -
 __Lstrings 0 0 ABS 0 strings -
 __Hreset_vec 6 0 CODE 0 reset_vec -
 __ptext1 26 0 CODE 0 text1 dist/default/production\Lab_8.X.production.o
-__ptext2 92 0 CODE 0 text2 dist/default/production\Lab_8.X.production.o
+__ptext2 FC 0 CODE 0 text2 dist/default/production\Lab_8.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __Lreset_vec 0 0 CODE 0 reset_vec -
@@ -220,13 +233,15 @@ __Lfunctab 0 0 ENTRY 0 functab -
 __Lclrtext 0 0 ABS 0 clrtext -
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\Lab_8.X.production.o
 __Hend_init 1E 0 CODE 0 end_init -
-__end_of_main E4 0 CODE 0 maintext dist/default/production\Lab_8.X.production.o
+__end_of_main FC 0 CODE 0 maintext dist/default/production\Lab_8.X.production.o
 _ANSEL 188 0 ABS 0 - dist/default/production\Lab_8.X.production.o
 _PORTA 5 0 ABS 0 - dist/default/production\Lab_8.X.production.o
 _PORTC 7 0 ABS 0 - dist/default/production\Lab_8.X.production.o
+_PORTD 8 0 ABS 0 - dist/default/production\Lab_8.X.production.o
 _TRISA 85 0 ABS 0 - dist/default/production\Lab_8.X.production.o
 _TRISC 87 0 ABS 0 - dist/default/production\Lab_8.X.production.o
-__end_of_setup 92 0 CODE 0 text1 dist/default/production\Lab_8.X.production.o
+_TRISD 88 0 ABS 0 - dist/default/production\Lab_8.X.production.o
+__end_of_setup 9E 0 CODE 0 text1 dist/default/production\Lab_8.X.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
 interrupt_function 8 0 CODE 0 intentry dist/default/production\Lab_8.X.production.o
@@ -258,8 +273,8 @@ __initialization 1E 0 CODE 0 cinit dist/default/production\Lab_8.X.production.o
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-cstackCOMMON 1 70 70 4 1
-intentry 0 4 8 6E 2
+cstackCOMMON 1 70 70 5 1
+intentry 0 4 8 9F 2
 reset_vec 0 0 0 3 2
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section
