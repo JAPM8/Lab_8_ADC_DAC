@@ -1,4 +1,4 @@
-# 1 "main_Lab.c"
+# 1 "main_postLab.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,8 +6,8 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "main_Lab.c" 2
-# 16 "main_Lab.c"
+# 1 "main_postLab.c" 2
+# 15 "main_postLab.c"
 #pragma config FOSC = INTRC_NOCLKOUT
 #pragma config WDTE = OFF
 #pragma config PWRTE = OFF
@@ -2644,12 +2644,24 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\\pic\\include\\xc.h" 2 3
-# 34 "main_Lab.c" 2
+# 33 "main_postLab.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.35\\pic\\include\\c90\\stdint.h" 1 3
-# 35 "main_Lab.c" 2
-# 45 "main_Lab.c"
+# 34 "main_postLab.c" 2
+# 45 "main_postLab.c"
+uint8_t banderas;
+int conv;
+int val_div[3] = {0,0,0};
+uint8_t val_disp[3] = {0,0,0};
+
+uint8_t tabla_7seg [10] = {0b10111111, 0b10000110,0b11011011,0b11001111,0b11100110,0b11101101,0b11111101,0b10000111,0b11111111,0b11101111};
+
+
+
+
 void setup(void);
+void division(int CONTEO);
+void set_displays(int CONTEO_U, int CONTEO_D, int CONTEO_C);
 
 void __attribute__((picinterrupt(("")))) isr(void){
 
@@ -2658,9 +2670,33 @@ void __attribute__((picinterrupt(("")))) isr(void){
             PORTC = ADRESH;
         }
         else if (ADCON0bits.CHS == 1){
-            PORTD = ADRESH;
+            conv = 100*ADRESH/51;
+            division(conv);
+            set_displays(val_div[0],val_div[1],val_div[2]);
         }
         PIR1bits.ADIF = 0;
+    }
+
+    if (INTCONbits.T0IF){
+       PORTE = 0;
+       if(banderas == 0){
+           PORTD = val_disp[0];
+           PORTE = 0b00000001;
+           banderas = 1;
+       }
+       else if(banderas == 1){
+           PORTD = val_disp[1];
+           PORTE = 0b00000010;
+           banderas = 2;
+       }
+       else if(banderas == 2){
+           PORTD = val_disp[2];
+           PORTE = 0b00000100;
+           banderas = 0;
+       }
+
+       INTCONbits.T0IF = 0;
+       TMR0 = 217;
     }
     return;
 }
@@ -2698,6 +2734,8 @@ void setup(void){
     PORTC = 0;
     TRISD = 0;
     PORTD = 0;
+    TRISE = 0;
+    PORTE = 0;
 
 
     ADCON0bits.ADCS = 0b01;
@@ -2709,8 +2747,32 @@ void setup(void){
     _delay((unsigned long)((40)*(4000000/4000000.0)));
 
 
+    OPTION_REGbits.T0CS = 0;
+    OPTION_REGbits.PSA = 0;
+    OPTION_REGbits.PS2 = 1;
+    OPTION_REGbits.PS1 = 1;
+    OPTION_REGbits.PS0 = 1;
+    TMR0 = 217;
+
+
     INTCONbits.GIE = 1;
     PIE1bits.ADIE = 1;
+    INTCONbits.T0IE = 1;
     PIR1bits.ADIF = 0;
+    INTCONbits.T0IF = 0;
     INTCONbits.PEIE = 1;
  }
+
+void division(int CONTEO){
+    val_div[2] = CONTEO/100;
+    val_div[1] = (CONTEO-val_div[2]*100)/10;
+    val_div[0] = CONTEO-val_div[2]*100-val_div[1]*10;
+    return;
+}
+
+void set_displays(int CONTEO_U, int CONTEO_D, int CONTEO_C){
+    val_disp[0] = tabla_7seg[CONTEO_U];
+    val_disp[1] = tabla_7seg[CONTEO_D];
+    val_disp[2] = tabla_7seg[CONTEO_C];
+    return;
+}
